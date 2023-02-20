@@ -54,16 +54,7 @@ const Appointments = db.define('appointment', {
         allowNull: false,
         type: DataTypes.STRING
     },
-    role: {
-        allowNull: false,
-        type: DataTypes.STRING,
-        defaultValue: 'normal'
-    },
-    status: {
-        allowNull: false,
-        type: DataTypes.STRING,
-        defaultValue: 'active' //active, non-active, deleted, suspended
-    },
+
     createdAt: {
         type: DataTypes.DATE,
         allowNull: false,
