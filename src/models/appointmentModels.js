@@ -1,8 +1,10 @@
 const { DataTypes } = require('sequelize')
-const { Op } = require('sequelize');
-const { db } = require('../utils/database')
 
-const Appointments = db.define('appointments', {
+const { db } = require('../utils/database')
+const { Op } = require('sequelize')
+
+
+const Cita = db.define('appointments', {
     id: {
         primaryKey: true,
         type: DataTypes.UUID,
@@ -37,7 +39,7 @@ const Appointments = db.define('appointments', {
             async isAvailable(value) {
                 const startHour = new Date(value).setMinutes(0, 0, 0);
                 const endHour = new Date(value).setMinutes(59, 59, 999);
-                const existingAppointments = await Appointments.count({
+                const existingAppointments = await Cita.count({
                     where: {
                         time: {
                             [Op.between]: [startHour, endHour]
@@ -65,6 +67,6 @@ const Appointments = db.define('appointments', {
         allowNull: false,
         field: 'updated_at'
     }
-})
+} )
 
-module.exports = Appointments
+module.exports = Cita

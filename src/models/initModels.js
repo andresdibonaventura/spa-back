@@ -1,5 +1,6 @@
 const Users = require('./user.model')
 const Roles = require('./roles.model')
+const Cita = require('./appointmentModels')
 
 // const Task = require('./taskModels')
 

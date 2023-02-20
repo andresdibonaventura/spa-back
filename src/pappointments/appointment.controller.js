@@ -1,14 +1,14 @@
 const uuid = require("uuid");
 
-const Appointments = require('../models/appointment.model')
-const time = require('../models/appointment.model')
+const Cita = require('../models/appointmentModels')
+
 const getAllAppointments = async () => {
-    const data = await Appointments.findAll()
+    const data = await Cita.findAll()
     return data
 }
 
 const getAppointmentById = async (id) => {
-    const data = await Appointments.findOne({
+    const data = await Cita.findOne({
         where: {
             id: id
         }
@@ -16,23 +16,12 @@ const getAppointmentById = async (id) => {
     return data
 }
 
-const { Op } = require('sequelize');
+
 
 
 const createAppointment = async (data) => {
   
-    // const existingAppointments = await Appointments.count({
-    //   where: {
-    //     datetime: {
-    //       [Op.between]: [data.datetime, new Date(data.datetime+ 60 * 60 * 1000)]
-    //     }
-    //   }
-    // });
-  
-    // if (existingAppointments >= 5) {
-    //   return 'No hay citas disponibles a esta hora';
-    // } else {
-      const newAppointment = await Appointments.create({
+      const newAppointment = await Cita.create({
         id: uuid.v4(),
         firstName: data.firstName,
         lastName: data.lastName,
@@ -46,7 +35,7 @@ const createAppointment = async (data) => {
 //   };
 
 const deleteAppointment = async (id) => {
-    const data = await Appointments.destroy({
+    const data = await Cita.destroy({
         where:{
             id:id
         }

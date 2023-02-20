@@ -1,4 +1,5 @@
-const appController = require('./appointments.controller')
+
+const appController = require('./appointment.controller')
 
 const getAll = (req, res) => {
     appController
@@ -52,7 +53,7 @@ const create = (req, res) => {
           });
         })
         .catch(err => {
-          res.status(400).json({message: `${err}, no fue posible crear el appointment`})
+          res.status(400).json({message: `${err}, no fue posible crear el appointment`, data})
         }) 
     }
   }

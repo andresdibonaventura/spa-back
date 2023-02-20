@@ -27,7 +27,8 @@ const Users = db.define('users', {
         type: DataTypes.STRING(30),
         unique: true,
         validate: {
-            isEmail: true
+            isEmail: true,
+            
         }
     },
     password: {

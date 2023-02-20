@@ -1,6 +1,6 @@
 
 const uuid = require("uuid")
-const Products = require("../models/products.model")
+const Products = require("models/products.model")
 
 
 const createProduct = async (data) => {
