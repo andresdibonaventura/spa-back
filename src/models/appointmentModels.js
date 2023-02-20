@@ -4,7 +4,7 @@ const { db } = require('../utils/database')
 const { Op } = require('sequelize')
 
 
-const Cita = db.define('appointments', {
+const Cita = db.define('appointment', {
     id: {
         primaryKey: true,
         type: DataTypes.UUID,
