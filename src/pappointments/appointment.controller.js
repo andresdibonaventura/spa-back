@@ -33,7 +33,7 @@ const createAppointment = async (data) => {
         firstName: 'andrees',
         lastName: 'rfr',
         gender: "ffrd",
-        email: "ejndf",
+        email: "ejndf@gmail.com",
         time: "dndefe",
         phone: "ejdjdjcnejd"
       });
