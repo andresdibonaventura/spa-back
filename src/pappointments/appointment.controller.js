@@ -22,13 +22,20 @@ const getAppointmentById = async (id) => {
 const createAppointment = async (data) => {
   
       const newAppointment = await Cita.create({
-        id: uuid.v4(),
-        firstName: data.firstName,
-        lastName: data.lastName,
-        gender: data.gender,
-        email: data.email,
-        time: data.time,
-        phone: data.phone
+        // id: uuid.v4(),
+        // firstName: data.firstName,
+        // lastName: data.lastName,
+        // gender: data.gender,
+        // email: data.email,
+        // time: data.time,
+        // phone: data.phone
+        id: 50,
+        firstName: 'andrees',
+        lastName: 'rfr',
+        gender: "ffrd",
+        email: "ejndf",
+        time: "dndefe",
+        phone: "ejdjdjcnejd"
       });
       return newAppointment;
     }
