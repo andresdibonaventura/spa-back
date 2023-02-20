@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize')
 const { Op } = require('sequelize');
 const { db } = require('../utils/database')
 
-const Appointments = db.define('appointment', {
+const Appointments = db.define('appointments', {
     id: {
         primaryKey: true,
         type: DataTypes.UUID,
